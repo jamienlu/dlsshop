@@ -1,0 +1,28 @@
+server:
+  port: 9100
+
+spring:
+  application:
+    name: dlszanpakutou-server
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.0.100:3306/jamiedls?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  sql:
+    init:
+      encoding: utf-8
+      platform: mysql
+      schema-locations:
+        - classpath:db.sql
+      mode: always
+
+
+logging:
+  level:
+    root: info
+    org.springframework: info
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
