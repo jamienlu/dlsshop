@@ -1,2 +1,2 @@
-# dlsshop
+# zanpakutou
 simply configuration center
